@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Wakey</string>
+    <string name="title_selector">Let’s get connected to wakey for healthy lifestyle</string>
+    <string name="description_selector">Explore the most elegant way of achieving your morning routine let’s build a healthy life.</string>
+    <string name="label_signin">Signin</string>
+    <string name="label_signup">Signup</string>
+    <string name="title_login">Hii There!!</string>
+    <string name="description_login">Welcome back you’ve been missed!</string>
+    <string name="hint_input_username">Enter Username</string>
+    <string name="hint_input_password">Password</string>
+    <string name="label_recover_password">Recover Password?</string>
+    <string name="label_or">or</string>
+    <string name="label_login_to_signup">Don’t have an account? Signup</string>
+    <string name="label_signup_to_login">Already have an account? Signin</string>
+    <string name="label_terms_condition">By signing up you agree to Terms &amp; conditions of Wakey app.</string>
+    <string name="title_signup">Hii There!!</string>
+    <string name="description_signup">Welcome to wakey one stop solution for healthy life</string>
+    <string name="hint_input_email">Email</string>
+</resources>
