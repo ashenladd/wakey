@@ -15,8 +15,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SplashFragment : Fragment() {
-        private var _binding: FragmentSplashBinding? =null
-        private val binding get()= _binding!!
+    private var _binding: FragmentSplashBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,13 +31,13 @@ class SplashFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         lifecycleScope.launch {
-            delay(2000  )
+            delay(2000)
 
             navigateToSelector()
         }
     }
 
-    private fun navigateToSelector(){
+    private fun navigateToSelector() {
         val direction = SplashFragmentDirections.actionSplashFragmentToLoginSelectorFragment()
         findNavController().navigate(direction)
     }

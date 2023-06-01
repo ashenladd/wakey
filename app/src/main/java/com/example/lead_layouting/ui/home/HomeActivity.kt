@@ -6,7 +6,7 @@ import com.example.lead_layouting.R
 import com.example.lead_layouting.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
-    private  var _binding: ActivityHomeBinding? = null
+    private var _binding: ActivityHomeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {

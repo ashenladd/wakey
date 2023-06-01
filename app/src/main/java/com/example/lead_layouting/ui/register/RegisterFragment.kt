@@ -13,8 +13,8 @@ import com.example.lead_layouting.databinding.FragmentHomeBinding
 import com.example.lead_layouting.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
-        private var _binding: FragmentRegisterBinding? =null
-        private val binding get()= _binding!!
+    private var _binding: FragmentRegisterBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,12 +28,12 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            btnSignup.setOnClickListener{
+            btnSignup.setOnClickListener {
                 val email = tietEmail.text.toString()
-                if(email != ""){
+                if (email != "") {
                     navigateToHome(email)
-                }else{
-                    Log.d("Debug","Ini Username {$email}")
+                } else {
+                    Log.d("Debug", "Ini Username {$email}")
                     navigateToHome()
                 }
             }
@@ -43,11 +43,12 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    fun navigateToHome(nama:String?=null){
+    fun navigateToHome(nama: String? = null) {
         val direction = RegisterFragmentDirections.actionRegisterFragmentToHomeFragment(nama)
         findNavController().navigate(direction)
     }
-    fun navigateToLogin(){
+
+    fun navigateToLogin() {
         val direction = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
         findNavController().navigate(direction)
     }

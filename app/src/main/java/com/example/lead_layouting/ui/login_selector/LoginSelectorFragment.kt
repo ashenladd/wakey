@@ -11,8 +11,8 @@ import com.example.lead_layouting.R
 import com.example.lead_layouting.databinding.FragmentLoginSelectorBinding
 
 class LoginSelectorFragment : Fragment() {
-        private var _binding: FragmentLoginSelectorBinding? =null
-        private val binding get()= _binding!!
+    private var _binding: FragmentLoginSelectorBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,7 +27,7 @@ class LoginSelectorFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.apply {
-            btnSignin.setOnClickListener{
+            btnSignin.setOnClickListener {
                 navigateToSignIn()
             }
             btnSignup.setOnClickListener {
@@ -35,12 +35,15 @@ class LoginSelectorFragment : Fragment() {
             }
         }
     }
-    private fun navigateToSignIn(){
+
+    private fun navigateToSignIn() {
         val direction = LoginSelectorFragmentDirections.actionLoginSelectorFragmentToLoginFragment()
         findNavController().navigate(direction)
     }
-    private fun navigateToSignUp(){
-        val direction = LoginSelectorFragmentDirections.actionLoginSelectorFragmentToRegisterFragment()
+
+    private fun navigateToSignUp() {
+        val direction =
+            LoginSelectorFragmentDirections.actionLoginSelectorFragmentToRegisterFragment()
         findNavController().navigate(direction)
     }
 }

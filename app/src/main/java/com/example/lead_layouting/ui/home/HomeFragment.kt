@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
 
     fun loadData() {
         val nama = args.nama
-        Log.d("Debug","Ini Username Home{$nama}")
+        Log.d("Debug", "Ini Username Home{$nama}")
         binding.tvUsername.text = nama
     }
 
