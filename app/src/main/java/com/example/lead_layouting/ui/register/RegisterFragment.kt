@@ -30,10 +30,9 @@ class RegisterFragment : Fragment() {
         binding.apply {
             btnSignup.setOnClickListener {
                 val email = tietEmail.text.toString()
-                if (email != "") {
+                if (email.isNotBlank()) {
                     navigateToHome(email)
                 } else {
-                    Log.d("Debug", "Ini Username {$email}")
                     navigateToHome()
                 }
             }
@@ -43,8 +42,13 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    fun navigateToHome(nama: String? = null) {
+    //Overloading
+    fun navigateToHome(nama: String) {
         val direction = RegisterFragmentDirections.actionRegisterFragmentToHomeFragment(nama)
+        findNavController().navigate(direction)
+    }
+    fun navigateToHome() {
+        val direction = RegisterFragmentDirections.actionRegisterFragmentToHomeFragment()
         findNavController().navigate(direction)
     }
 

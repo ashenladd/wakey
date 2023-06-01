@@ -40,11 +40,15 @@ class LoginFragment : Fragment() {
 
     }
 
-    fun navigateToHome(nama: String? = null) {
+    //Overloading
+    fun navigateToHome(nama: String) {
         val direction = LoginFragmentDirections.actionLoginFragmentToHomeFragment(nama)
         findNavController().navigate(direction)
     }
-
+    fun navigateToHome() {
+        val direction = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+        findNavController().navigate(direction)
+    }
     fun navigateToRegister() {
         val direction = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
         findNavController().navigate(direction)
